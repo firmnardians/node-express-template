@@ -1,11 +1,14 @@
 const { default: axios } = require('axios');
 const express = require('express');
+const cors = require('cors');
 
 const PORT = 5000;
 const app = express();
 
+app.use(cors());
+
 app.get('/', (req, res) => {
-	res.send('Welcome to your App!');
+	res.send('This is folderin api');
 });
 
 app.get('/users', (req, res) => {
