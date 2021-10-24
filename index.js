@@ -1,4 +1,3 @@
-const { default: axios } = require('axios');
 const express = require('express');
 const cors = require('cors');
 
@@ -8,18 +7,7 @@ const app = express();
 app.use(cors());
 
 app.get('/', (req, res) => {
-	res.send('This is folderin api');
-});
-
-app.get('/users', (req, res) => {
-	axios
-		.get('https://jsonplaceholder.typicode.com/users')
-		.then((response) => {
-			res.json(response.data);
-		})
-		.catch((err) => {
-			res.json('Error', err);
-		});
+	res.send('Hallo');
 });
 
 app.listen(PORT, function () {
